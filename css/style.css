@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Waterfall&display=swap');
+
+
+/* All over the body */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #183b56;
+    
+  }
+
+  p{
+    .para {
+        font-family: "Waterfall", serif;
+        font-weight: 400;
+        font-style: normal;
+      } 
+  }
+
+  header{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1.2px solid gray;
+    border-radius: 15px;
+    box-shadow: 1.5px 1.5px  2px gray;
+    margin: 0px 10px;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    margin-right: 15px;
+  }
+
+  /* Header and nav section */
+
+
+
+  .nav-menu ul{
+    display: flex;
+  }
+
+  
+  .nav-menu{
+    align-content: center;
+    font-size: 1.3rem;
+  }
+
+ .nav-menu a{
+  color: #183b56;
+ }
+ 
+ .nav-menu a:hover{
+  color: #2294ed;
+  transition: 0.3s ease-out;
+ }
+  
+ /* Main section hero section  */
+
+ .hero {
+
+  margin-top: 2px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 25px;
+   
+  }
+
+  .hero-image{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  display: block;
+  }
+
+  .hero-content{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.9rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    color: white;  
+  }
+
+
+.book{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+  .book-para{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 18px;
+    font-family: "Waterfall", serif;
+  }
+
+  .hero-button{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #183b56;
+    border: 1.5px solid  #183b56 ;
+    border-radius: 15px;
+    padding: 5px 15px;
+  }
+
+  .hero-button:hover{
+    color: white;
+    background-color: #2294ed;
+    border: 1.5px solid #183b56; 
+    transition: 0.5s ease-out;
+  }
+  
+
+
+/* Popular Destination */
+
+
+.destination{
+  /* font-size: 2.4rem; */
+  margin: 40px 80px;
+  /* text-align: center; */
+}
+
+.destination-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 40px;
+}
+
+.destination-item img{
+width: 100%;
+height: 400px;
+/* object-fit: cover; */
+border-radius: 10px;
+}
+
+@keyframes colorChange {
+  0% { color:#FF671F; }
+  16% { color:#bdb1b1; }
+  32% { color:#046A38; }
+  48% { color:#FF671F; }
+  64% { color:#bdb1b1; }
+  100% { color:#046A38; }
+  
+}
+
+.destination h2{
+  text-align: center;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-bottom: 30px;
+
+
+
+    font-size: 2em;
+    font-weight: bold;
+    animation: colorChange 3s infinite alternate;
+
+}
+
+/* View All button */
+.view-all{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+  
+.view-popular{
+  text-align: center;
+    font-weight: 500;
+    margin-top: 18px;
+    border: 3px solid  #183b56;
+    color:  #183b56;
+    border-radius: 15px;
+    padding: 8px 15px;
+}
+
+.view-popular:hover{
+  background-color: orangered;
+  color: aliceblue;
+  transition: 0.8s ease-out;
+  border: 3px solid orangered;
+}
+
+
+/* I user same style for featured hotels */
+
+
+/* used same styling for featured activites*/
+
+.about-para{
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 45px;
+}
+
+.destination-about{
+  /* font-size: 2.4rem; */
+  margin: 40px 200px;
+  /* text-align: center; */
+}
+
+.destination-grid-about{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 40px;
+}
+
+.destination-item-about img{
+width: 100%;
+height: 300px;
+/* object-fit: cover; */
+border-radius:45px;
+}
+
+@keyframes colorChange {
+  0% { color:#FF671F; }
+  16% { color:#bdb1b1; }
+  32% { color:#046A38; }
+  48% { color:#FF671F; }
+  64% { color:#bdb1b1; }
+  100% { color:#046A38; }
+  
+}
+
+.destination-about h2{
+  text-align: center;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin-bottom: 30px;
+
+
+
+    font-size: 2em;
+    font-weight: bold;
+    animation: colorChange 3s infinite alternate;
+
+}
+
+.destination-item-about h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* contact us */
+
+.contact{
+ 
+padding: 80px;
+text-align: center;
+background-color: #faf2f2;
+border-radius: 80px;
+
+}
+
+.contact h3{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  animation: colorChange 3s infinite alternate;
+  font-weight: 500;
+}
+
+.contact-info p{
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.contact-info ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-info li{
+  margin:0 20px ;
+  font-size: 1.1rem;
+}
+
+.contact-info li a{
+  color: blueviolet;
+}
+
+/* form section */
+
+.form{
+  width: 100%;
+}
+
+input,textarea{
+  width: 70%;
+  padding: 10px ;
+  margin: 15px 0;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) ;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+textarea{
+  height: 200px;
+}
+
+.form-button{
+ padding: 15px;
+}
+
+/* Footer */
+
+footer{
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.social-icon a{
+ color: #fff;
+ font-size: 24px;
+ margin-right: 20px;
+}
+
+.social-icon a:hover{
+  color: #2294ed;
+  transition: 0.3s ease-out;
+}
