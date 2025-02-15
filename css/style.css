@@ -95,6 +95,7 @@ body{
     left: 50%;
     transform: translate(-50%, -0%);
     color: white;  
+    
   }
 
 
@@ -345,4 +346,388 @@ footer{
 .social-icon a:hover{
   color: #2294ed;
   transition: 0.3s ease-out;
+}
+
+
+/* Responsive  */
+
+
+
+/* Default styles are already applied. Below are the media queries for responsiveness */
+
+/* 📱 Small devices (phones, 320px - 480px) */
+@media(max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .hero-content {
+    font-size: 1.4rem;
+    top: 50%;
+  }
+
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+  }
+
+  .form input,
+  .form textarea {
+    width: 90%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 📱📏 Medium devices (tablets, 481px - 768px) */
+@media(max-width: 768px) {
+  .nav-menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    font-size: 1.8rem;
+  }
+
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form input,
+  .form textarea {
+    width: 85%;
+  }
+}
+
+/* 💻 Large devices (laptops, desktops, 769px - 1024px) */
+@media(max-width: 1024px) {
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🖥️ Extra large screens (above 1025px) */
+@media(min-width: 1025px) {
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+/* ----------------------------------------------------------------997 */
+
+/* ✅ Improve Layout for Screens Above 971px Width */
+@media(min-width: 1289px) {
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-content {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-menu ul {
+    justify-content: space-around;
+  }
+
+  .contact-info ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .form input,
+  .form textarea {
+    width: 80%;
+  }
+}
+
+/* ✅ Adjustments for Tablets & Small Laptops */
+@media(max-width: 970px) {
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form input,
+  .form textarea {
+    width: 85%;
+  }
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+/* ✅ Adjust for screens below 848px - Make it Single Column */
+@media(max-width: 848px) {
+  .destination-grid,
+  .destination-grid-about {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .hero-content {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form input,
+  .form textarea {
+    width: 90%;
+  }
+}
+/* ----------------------------change the about section after 762 */
+
+
+/* ✅ Adjust for screens below 762px - Improve About Section */
+
+@media(max-width: 762px) {
+  .about-section {
+    padding: 40px 10px; /* Adjust padding for better spacing */
+    font-size: 1.2rem; /* Keep text readable */
+    text-align: center;
+  }
+
+  .about-section img {
+    width: 100%; /* Make the image take full width */
+    max-width: none; /* Remove width restriction */
+    margin: 0; /* Remove margins */
+    display: block;
+  }
+}
+
+/* After 765 change about section */
+
+@media(max-width: 765px) {
+  /* Adjusts the about section layout */
+  .destination-grid-about {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    gap: 20px; /* Adds spacing between items */
+  }
+
+  /* Make images larger and remove margins */
+  .destination-item-about img {
+    width: 100%; /* Full width for better scaling */
+    max-width: 320px; /* Prevents it from being too big */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Soft edges */
+  }
+
+  /* Text adjustments */
+  .destination-item-about h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .destination-item-about p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px; /* Adds padding for readability */
+  }
+
+  /* Adjust the paragraph below the grid */
+  .about-para {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+
+/* at 667 */
+
+@media(max-width: 667px) {
+  .destination-about {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .destination-grid-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .destination-item-about {
+    width: 100%;
+    text-align: center;
+    height: 500px;
+  }
+
+  .destination-item-about img {
+    width: 100%; /* Makes images take full width */
+    max-width: 400px; /* Prevents excessive stretching */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .destination-item-about h3 {
+    font-size: 24px; /* Increase heading size */
+    margin-top: 10px;
+  }
+
+  .destination-item-about p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px 15px;
+  }
+
+  .about-para {
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+/* iphone se */
+
+@media  (max-width: 390px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 90px; /* Adjust logo size */
+  }
+
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .destination-grid,
+  .destination-grid-about {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .destination-item,
+  .destination-item-about {
+    width: 90%;
+    text-align: center;
+  }
+
+  .destination-item img,
+  .destination-item-about img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .book-para p {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .about-para {
+    font-size: 16px;
+    max-width: 95%;
+  }
+
+  .contact-info ul {
+    padding: 0;
+  }
+
+  .contact-info ul li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .form input,
+  .form textarea {
+    width: 90%;
+  }
+
+  .view-popular {
+    width: 90%;
+    text-align: center;
+  }
+}
+/* about section */
+@media (max-width:658){
+   .destination-about{
+    display: none!important;
+   }
+
+   .destination-item-about{
+    display: none!important;
+   }
+
 }
