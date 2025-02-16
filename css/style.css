@@ -224,6 +224,8 @@ border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .destination-item-about img{
@@ -265,12 +267,10 @@ border-radius:45px;
 /* contact us */
 
 .contact{
- 
 padding: 80px;
 text-align: center;
 background-color: #faf2f2;
 border-radius: 80px;
-
 }
 
 .contact h3{
@@ -348,386 +348,207 @@ footer{
   transition: 0.3s ease-out;
 }
 
+/* drop down menu style */
 
-/* Responsive  */
-
-
-
-/* Default styles are already applied. Below are the media queries for responsiveness */
-
-/* 📱 Small devices (phones, 320px - 480px) */
-@media(max-width: 480px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .nav-menu ul li {
-    margin: 10px 0;
-  }
-
-  .hero-content {
-    font-size: 1.4rem;
-    top: 50%;
-  }
-
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info ul {
-    flex-direction: column;
-  }
-
-  .form input,
-  .form textarea {
-    width: 90%;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-/* 📱📏 Medium devices (tablets, 481px - 768px) */
-@media(max-width: 768px) {
-  .nav-menu ul {
+/* Button to trigger dropdown */
+.dropbtn {
+  position: absolute;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  top: 33%;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change button color when dropdown is hovered */
+.dropdown:hover .dropbtn {
+  background-color: #2980b9;
+}
+ 
+
+/* -------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Responsive Design */
+@media (max-width:1186px) {
+  
+.nav-menu{
+  display: none;
+}
+
+}
+
+@media(min-width:1185px){
+  .dropdown{
+    display: none;
+  }
+
+}
+
+@media(max-width:1060px){
+
+.destination-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destination-grid-about{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+}
+
+@media(max-width:922px){
+  .hero-content{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1.9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    color: white;  
+    
+  }
+
+}
+
+
+
+@media(max-width:797px){
+  .destination-about{
+    /* font-size: 2.4rem; */
+    margin: 40px 120px;
+    
+    /* text-align: center; */
+  }
+  
+  /* .destination-grid-about{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
+  } */
+  
+  .destination-item-about img{
+  width: 100%;
+  height: 300px;
+  /* object-fit: cover; */
+  border-radius:45px;
   }
-
-  .hero-content {
-    font-size: 1.8rem;
-  }
-
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-info ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form input,
-  .form textarea {
-    width: 85%;
-  }
+  
 }
 
-/* 💻 Large devices (laptops, desktops, 769px - 1024px) */
-@media(max-width: 1024px) {
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* 🖥️ Extra large screens (above 1025px) */
-@media(min-width: 1025px) {
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-
-/* ----------------------------------------------------------------997 */
-
-/* ✅ Improve Layout for Screens Above 971px Width */
-@media(min-width: 1289px) {
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .hero-content {
-    font-size: 2rem;
+@media(max-width:492px){
+  .hero-content{
+    margin-top: 15px;
     text-align: center;
-    padding: 20px;
+    font-size: 1.9rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    color: white;  
+    
   }
-
-  .nav-menu ul {
-    justify-content: space-around;
-  }
-
-  .contact-info ul {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .form input,
-  .form textarea {
-    width: 80%;
-  }
-}
-
-/* ✅ Adjustments for Tablets & Small Laptops */
-@media(max-width: 970px) {
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-content {
-    font-size: 1.8rem;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-info ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form input,
-  .form textarea {
-    width: 85%;
-  }
-}
-
-
-/* ----------------------------------------------------------------------------- */
-
-/* ✅ Adjust for screens below 848px - Make it Single Column */
-@media(max-width: 848px) {
-  .destination-grid,
-  .destination-grid-about {
-    grid-template-columns: 1fr; /* Single column */
-  }
-
-  .hero-content {
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .contact-info ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .form input,
-  .form textarea {
-    width: 90%;
-  }
-}
-/* ----------------------------change the about section after 762 */
-
-
-/* ✅ Adjust for screens below 762px - Improve About Section */
-
-@media(max-width: 762px) {
-  .about-section {
-    padding: 40px 10px; /* Adjust padding for better spacing */
-    font-size: 1.2rem; /* Keep text readable */
-    text-align: center;
-  }
-
-  .about-section img {
-    width: 100%; /* Make the image take full width */
-    max-width: none; /* Remove width restriction */
-    margin: 0; /* Remove margins */
-    display: block;
-  }
-}
-
-/* After 765 change about section */
-
-@media(max-width: 765px) {
-  /* Adjusts the about section layout */
-  .destination-grid-about {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    gap: 20px; /* Adds spacing between items */
-  }
-
-  /* Make images larger and remove margins */
-  .destination-item-about img {
-    width: 100%; /* Full width for better scaling */
-    max-width: 320px; /* Prevents it from being too big */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 10px; /* Soft edges */
-  }
-
-  /* Text adjustments */
-  .destination-item-about h3 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .destination-item-about p {
-    font-size: 16px;
-    text-align: center;
-    padding: 0 15px; /* Adds padding for readability */
-  }
-
-  /* Adjust the paragraph below the grid */
-  .about-para {
-    font-size: 18px;
-    text-align: center;
-    padding: 10px 20px;
-  }
-}
-
-/* at 667 */
-
-@media(max-width: 667px) {
-  .destination-about {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .destination-grid-about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .destination-item-about {
-    width: 100%;
-    text-align: center;
-    height: 500px;
-  }
-
-  .destination-item-about img {
-    width: 100%; /* Makes images take full width */
-    max-width: 400px; /* Prevents excessive stretching */
-    height: auto;
-    border-radius: 10px;
-  }
-
-  .destination-item-about h3 {
-    font-size: 24px; /* Increase heading size */
-    margin-top: 10px;
-  }
-
-  .destination-item-about p {
-    font-size: 18px;
-    line-height: 1.6;
-    padding: 10px 15px;
-  }
-
-  .about-para {
-    font-size: 18px;
-    padding: 20px;
-    text-align: center;
-    max-width: 90%;
-    margin: auto;
-  }
-}
-/* iphone se */
-
-@media  (max-width: 390px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-
-  .logo img {
-    width: 90px; /* Adjust logo size */
-  }
-
-  .nav-menu ul {
+  .hero-content p{
     display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
   }
 
-  .nav-menu ul li {
-    margin-bottom: 10px;
-  }
+}
 
-  .hero-content h1 {
-    font-size: 24px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .destination-grid,
-  .destination-grid-about {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .destination-item,
-  .destination-item-about {
-    width: 90%;
-    text-align: center;
-  }
-
-  .destination-item img,
-  .destination-item-about img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-  }
-
-  .book-para p {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .about-para {
-    font-size: 16px;
-    max-width: 95%;
-  }
-
-  .contact-info ul {
-    padding: 0;
-  }
-
-  .contact-info ul li {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .form input,
-  .form textarea {
-    width: 90%;
-  }
-
-  .view-popular {
-    width: 90%;
-    text-align: center;
+@media(max-width:602px){
+  .destination-about{
+    /* font-size: 2.4rem; */
+    margin: 40px 80px;
+    
+    /* text-align: center; */
   }
 }
-/* about section */
-@media (max-width:658){
-   .destination-about{
-    display: none!important;
-   }
 
-   .destination-item-about{
-    display: none!important;
-   }
+@media(max-width:471px){
+  .destination-about{
+    /* font-size: 2.4rem; */
+    margin: 40px 40px;
+    
+    /* text-align: center; */
+  }
 
+  
+  .destination{
+    /* font-size: 2.4rem; */
+    margin: 40px 40px;
+    /* text-align: center; */
+  }
+
+}
+
+@media(max-width:750px){
+
+.contact-info ul{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info ul li{
+  margin-bottom: 5px;
+}
+
+input,textarea{
+  width: 100%;
+  padding: 10px ;
+  margin: 5px 0;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) ;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.contact{
+  padding: 30px;
+  text-align: center;
+  background-color: #faf2f2;
+  border-radius: 80px;
+  }
 }
